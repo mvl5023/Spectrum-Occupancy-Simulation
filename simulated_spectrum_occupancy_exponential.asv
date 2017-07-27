@@ -11,8 +11,8 @@ samples = 1000;
 n = 5000;
 
 % Randomly generating mu
-m = 0.8;
-offset = 0.05;
+m = 2.2;
+offset = 0.2;
 mu = m*rand + offset;
 
 % Generating single channel occupancy data
@@ -43,7 +43,7 @@ for i = 2:channels
     G( i , : ) = [ T , zeros(1, n - size(T,2)) ];
 end
 
-G = 44.*G;
+G = 80.*G;
 figure
 image(G)
 colormap jet
